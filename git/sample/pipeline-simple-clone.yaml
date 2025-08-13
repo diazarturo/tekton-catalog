@@ -17,7 +17,7 @@ spec:
   workspaces:
     - name: pipeline-ws
   tasks:
-    - name: clone-build-task
+    - name: pipeline-simple-clone-task
       taskRef:
         name: git-clone-repo
       workspaces:
