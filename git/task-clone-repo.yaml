@@ -417,7 +417,10 @@ spec:
         echo -n "${GIT_COMMIT}" > $(results.git-commit.path)
         echo -n "${GIT_AUTH_USER}" > $(results.git-user.path)
         echo -n "${DIRECTORY_NAME}" > $(results.clone-directory.path)
-
+      volumeMounts:
+        - mountPath: /steps
+          name: steps-volume
+          
     - name: execute-script
       image: ubuntu
       env:
@@ -426,7 +429,7 @@ spec:
       script: |
         echo "<<<<<< ===============>>> "
         ls -la
-        
+
       volumeMounts:
         - mountPath: /steps
           name: steps-volume
