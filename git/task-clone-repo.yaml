@@ -417,6 +417,11 @@ spec:
         echo -n "${GIT_COMMIT}" > $(results.git-commit.path)
         echo -n "${GIT_AUTH_USER}" > $(results.git-user.path)
         echo -n "${DIRECTORY_NAME}" > $(results.clone-directory.path)
+
+        echo "Current directory: "
+        pwd
+        ls -la
+        
       volumeMounts:
         - mountPath: /steps
           name: steps-volume
