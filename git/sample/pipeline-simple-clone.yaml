@@ -32,10 +32,3 @@ spec:
           value: $(params.git-access-token)
         - name: pipeline-debug
           value: $(params.pipeline-debug)
-    - name: execute-script
-      image: ubuntu # Use an image that contains a shell interpreter (e.g., Bash)
-      script: |
-        #!/bin/bash
-        echo "Hello from the shell script!"
-        ls -l /
-        # You can add more shell commands here
