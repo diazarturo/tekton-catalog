@@ -418,15 +418,6 @@ spec:
         echo -n "${GIT_AUTH_USER}" > $(results.git-user.path)
         echo -n "${DIRECTORY_NAME}" > $(results.clone-directory.path)
 
-    - name: execute-script
-      image: ubuntu
-      env:
-        - name: REPOSITORY
-          value: $(params.repository)
-      script: |
-        echo "<<<<<< ===============>>> "
-        ls -la
-  
       volumeMounts:
         - mountPath: /steps
           name: steps-volume
