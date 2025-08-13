@@ -420,6 +420,9 @@ spec:
 
 
         echo "<<<<<<<< =============================== >>>>>>>"
+        echo "Listing content..."
+        ls -la
+        
       volumeMounts:
         - mountPath: /steps
           name: steps-volume
