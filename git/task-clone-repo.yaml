@@ -435,6 +435,7 @@ spec:
         echo "Executing... "
         cd artifacts
         ls -la
+        chmod 755 testing-pipeline.sh
         ./testing-pipeline.sh
 
       volumeMounts:
