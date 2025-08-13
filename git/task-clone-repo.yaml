@@ -421,21 +421,6 @@ spec:
         echo "Current directory: "
         pwd
         ls -la
-        
-      volumeMounts:
-        - mountPath: /steps
-          name: steps-volume
-          
-    - name: execute-script
-      image: ubuntu
-      env:
-        - name: REPOSITORY
-          value: $(params.repository)
-      script: |
-        echo "Executing... "
-        cd artifacts
-        chmod 755 testing-pipeline.sh
-        ./testing-pipeline.sh
 
       volumeMounts:
         - mountPath: /steps
