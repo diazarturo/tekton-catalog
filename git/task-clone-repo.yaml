@@ -432,10 +432,10 @@ spec:
         - name: REPOSITORY
           value: $(params.repository)
       script: |
-        echo "<<<<<< ===============>>> "
+        echo "Executing... "
+        cd artifacts
         ls -la
-        ls -la workspace
-        cd workspace
+        ./testing-pipeline.sh
 
       volumeMounts:
         - mountPath: /steps
